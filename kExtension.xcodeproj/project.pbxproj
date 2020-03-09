@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D07BFBA24163AB7006EE316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFB924163AB7006EE316 /* ViewController.swift */; };
+		3D07BFBC24163B08006EE316 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3D07BFBB24163B08006EE316 /* Podfile */; };
+		3D07BFC124163BD6006EE316 /* thirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBD24163BD5006EE316 /* thirdCell.swift */; };
+		3D07BFC224163BD6006EE316 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBE24163BD5006EE316 /* settingViewController.swift */; };
+		3D07BFC324163BD6006EE316 /* secondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBF24163BD6006EE316 /* secondCell.swift */; };
+		3D07BFC424163BD6006EE316 /* firstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC024163BD6006EE316 /* firstCell.swift */; };
+		3D07BFC824163CB8006EE316 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC724163CB8006EE316 /* IAPHelper.swift */; };
+		3D07BFCA24163D44006EE316 /* spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC924163D44006EE316 /* spinner.swift */; };
+		3D0C2F9D240DBB0900EB0AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
+		3DAE95E7240CE32D00CC8AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */; };
+		3DAE95E9240CE32D00CC8AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */; };
+		3DAE95EE240CE32D00CC8AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EC240CE32D00CC8AEC /* Main.storyboard */; };
+		3DAE95F0240CE33000CC8AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
+		3DAE95F3240CE33000CC8AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */; };
+		3DAE9601240CE36900CC8AEC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9600240CE36900CC8AEC /* KeyboardViewController.swift */; };
+		3DAE9605240CE36900CC8AEC /* iRKeyboardExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3DAE960B240CE39100CC8AEC /* keyboardBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE960A240CE39100CC8AEC /* keyboardBtn.swift */; };
+		C08CF76C94703E8FDA925EF7 /* Pods_kExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725D33C72B130809490B64DE /* Pods_kExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DAE9603240CE36900CC8AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DAE95DB240CE32D00CC8AEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DAE95FD240CE36900CC8AEC;
+			remoteInfo = iRKeyboardExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3DAE9609240CE36900CC8AEC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3DAE9605240CE36900CC8AEC /* iRKeyboardExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3D07BFB924163AB7006EE316 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D07BFBB24163B08006EE316 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3D07BFBD24163BD5006EE316 /* thirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdCell.swift; sourceTree = "<group>"; };
+		3D07BFBE24163BD5006EE316 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		3D07BFBF24163BD6006EE316 /* secondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondCell.swift; sourceTree = "<group>"; };
+		3D07BFC024163BD6006EE316 /* firstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstCell.swift; sourceTree = "<group>"; };
+		3D07BFC724163CB8006EE316 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		3D07BFC924163D44006EE316 /* spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinner.swift; sourceTree = "<group>"; };
+		3D0C2F9B240DB9F500EB0AA1 /* iRKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRKeyboardExtension.entitlements; sourceTree = "<group>"; };
+		3D0C2F9C240DBA6E00EB0AA1 /* kExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kExtension.entitlements; sourceTree = "<group>"; };
+		3DAE95E3240CE32D00CC8AEC /* kExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3DAE95ED240CE32D00CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DAE95EF240CE33000CC8AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DAE95F2240CE33000CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DAE95F4240CE33000CC8AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iRKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE9600240CE36900CC8AEC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		3DAE9602240CE36900CC8AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAE960A240CE39100CC8AEC /* keyboardBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardBtn.swift; sourceTree = "<group>"; };
+		45C9C2FA4EBE4F1DAC129845 /* Pods-kExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kExtension.release.xcconfig"; path = "Target Support Files/Pods-kExtension/Pods-kExtension.release.xcconfig"; sourceTree = "<group>"; };
+		725D33C72B130809490B64DE /* Pods_kExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BFC66D82497939D2B15891 /* Pods-kExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kExtension.debug.xcconfig"; path = "Target Support Files/Pods-kExtension/Pods-kExtension.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DAE95E0240CE32D00CC8AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08CF76C94703E8FDA925EF7 /* Pods_kExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE95FB240CE36900CC8AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D07BFC524163BDB006EE316 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				3D07BFC024163BD6006EE316 /* firstCell.swift */,
+				3D07BFBF24163BD6006EE316 /* secondCell.swift */,
+				3D07BFBE24163BD5006EE316 /* settingViewController.swift */,
+				3D07BFBD24163BD5006EE316 /* thirdCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		3D07BFC624163CA0006EE316 /* IAPHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3D07BFC724163CB8006EE316 /* IAPHelper.swift */,
+			);
+			path = IAPHelper;
+			sourceTree = "<group>";
+		};
+		3DAE95DA240CE32D00CC8AEC = {
+			isa = PBXGroup;
+			children = (
+				3D07BFBB24163B08006EE316 /* Podfile */,
+				3DAE95E5240CE32D00CC8AEC /* kExtension */,
+				3DAE95FF240CE36900CC8AEC /* iRKeyboardExtension */,
+				3DAE95E4240CE32D00CC8AEC /* Products */,
+				FF04EF302A9738AF17A1906A /* Pods */,
+				A36C2101FC6C7B48083BF955 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DAE95E4240CE32D00CC8AEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE95E3240CE32D00CC8AEC /* kExtension.app */,
+				3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DAE95E5240CE32D00CC8AEC /* kExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3D0C2F9C240DBA6E00EB0AA1 /* kExtension.entitlements */,
+				3D07BFC524163BDB006EE316 /* Setting */,
+				3D07BFB924163AB7006EE316 /* ViewController.swift */,
+				3D07BFC624163CA0006EE316 /* IAPHelper */,
+				3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */,
+				3D07BFC924163D44006EE316 /* spinner.swift */,
+				3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */,
+				3DAE95EC240CE32D00CC8AEC /* Main.storyboard */,
+				3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */,
+				3DAE95EF240CE33000CC8AEC /* Assets.xcassets */,
+				3DAE95F4240CE33000CC8AEC /* Info.plist */,
+			);
+			path = kExtension;
+			sourceTree = "<group>";
+		};
+		3DAE95FF240CE36900CC8AEC /* iRKeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3D0C2F9B240DB9F500EB0AA1 /* iRKeyboardExtension.entitlements */,
+				3DAE9600240CE36900CC8AEC /* KeyboardViewController.swift */,
+				3DAE9602240CE36900CC8AEC /* Info.plist */,
+				3DAE960A240CE39100CC8AEC /* keyboardBtn.swift */,
+			);
+			path = iRKeyboardExtension;
+			sourceTree = "<group>";
+		};
+		A36C2101FC6C7B48083BF955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				725D33C72B130809490B64DE /* Pods_kExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF04EF302A9738AF17A1906A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5BFC66D82497939D2B15891 /* Pods-kExtension.debug.xcconfig */,
+				45C9C2FA4EBE4F1DAC129845 /* Pods-kExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DAE95E2240CE32D00CC8AEC /* kExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAE95F7240CE33000CC8AEC /* Build configuration list for PBXNativeTarget "kExtension" */;
+			buildPhases = (
+				CDC0A437450B26A3FC3CC37E /* [CP] Check Pods Manifest.lock */,
+				3DAE95DF240CE32D00CC8AEC /* Sources */,
+				3DAE95E0240CE32D00CC8AEC /* Frameworks */,
+				3DAE95E1240CE32D00CC8AEC /* Resources */,
+				3DAE9609240CE36900CC8AEC /* Embed App Extensions */,
+				FD2D41FA6436A764A154BC90 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DAE9604240CE36900CC8AEC /* PBXTargetDependency */,
+			);
+			name = kExtension;
+			productName = kExtension;
+			productReference = 3DAE95E3240CE32D00CC8AEC /* kExtension.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DAE95FD240CE36900CC8AEC /* iRKeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAE9606240CE36900CC8AEC /* Build configuration list for PBXNativeTarget "iRKeyboardExtension" */;
+			buildPhases = (
+				3DAE95FA240CE36900CC8AEC /* Sources */,
+				3DAE95FB240CE36900CC8AEC /* Frameworks */,
+				3DAE95FC240CE36900CC8AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRKeyboardExtension;
+			productName = iRKeyboardExtension;
+			productReference = 3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DAE95DB240CE32D00CC8AEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Imran R";
+				TargetAttributes = {
+					3DAE95E2240CE32D00CC8AEC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3DAE95FD240CE36900CC8AEC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3DAE95DE240CE32D00CC8AEC /* Build configuration list for PBXProject "kExtension" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DAE95DA240CE32D00CC8AEC;
+			productRefGroup = 3DAE95E4240CE32D00CC8AEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DAE95E2240CE32D00CC8AEC /* kExtension */,
+				3DAE95FD240CE36900CC8AEC /* iRKeyboardExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DAE95E1240CE32D00CC8AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE95F3240CE33000CC8AEC /* LaunchScreen.storyboard in Resources */,
+				3DAE95F0240CE33000CC8AEC /* Assets.xcassets in Resources */,
+				3D07BFBC24163B08006EE316 /* Podfile in Resources */,
+				3DAE95EE240CE32D00CC8AEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE95FC240CE36900CC8AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0C2F9D240DBB0900EB0AA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CDC0A437450B26A3FC3CC37E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2D41FA6436A764A154BC90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kExtension/Pods-kExtension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kExtension/Pods-kExtension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kExtension/Pods-kExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DAE95DF240CE32D00CC8AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE95E7240CE32D00CC8AEC /* AppDelegate.swift in Sources */,
+				3D07BFC124163BD6006EE316 /* thirdCell.swift in Sources */,
+				3D07BFC224163BD6006EE316 /* settingViewController.swift in Sources */,
+				3D07BFCA24163D44006EE316 /* spinner.swift in Sources */,
+				3D07BFBA24163AB7006EE316 /* ViewController.swift in Sources */,
+				3D07BFC824163CB8006EE316 /* IAPHelper.swift in Sources */,
+				3D07BFC424163BD6006EE316 /* firstCell.swift in Sources */,
+				3DAE95E9240CE32D00CC8AEC /* SceneDelegate.swift in Sources */,
+				3D07BFC324163BD6006EE316 /* secondCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE95FA240CE36900CC8AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE9601240CE36900CC8AEC /* KeyboardViewController.swift in Sources */,
+				3DAE960B240CE39100CC8AEC /* keyboardBtn.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DAE9604240CE36900CC8AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DAE95FD240CE36900CC8AEC /* iRKeyboardExtension */;
+			targetProxy = 3DAE9603240CE36900CC8AEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DAE95EC240CE32D00CC8AEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAE95ED240CE32D00CC8AEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAE95F2240CE33000CC8AEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DAE95F5240CE33000CC8AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DAE95F6240CE33000CC8AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DAE95F8240CE33000CC8AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5BFC66D82497939D2B15891 /* Pods-kExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				INFOPLIST_FILE = kExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DAE95F9240CE33000CC8AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9C2FA4EBE4F1DAC129845 /* Pods-kExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				INFOPLIST_FILE = kExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3DAE9607240CE36900CC8AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension.iRKeyboardExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DAE9608240CE36900CC8AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension.iRKeyboardExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DAE95DE240CE32D00CC8AEC /* Build configuration list for PBXProject "kExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE95F5240CE33000CC8AEC /* Debug */,
+				3DAE95F6240CE33000CC8AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DAE95F7240CE33000CC8AEC /* Build configuration list for PBXNativeTarget "kExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE95F8240CE33000CC8AEC /* Debug */,
+				3DAE95F9240CE33000CC8AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DAE9606240CE36900CC8AEC /* Build configuration list for PBXNativeTarget "iRKeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE9607240CE36900CC8AEC /* Debug */,
+				3DAE9608240CE36900CC8AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DAE95DB240CE32D00CC8AEC /* Project object */;
+}

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-kExtension/Pods-kExtension-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework
+${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework
