@@ -217,7 +217,7 @@ struct IAPHelper {
                 if #available(iOS 11.2, *) {
                     if let trailperiod = product.introductoryPrice?.subscriptionPeriod {
                         if let period = product.introductoryPrice?.subscriptionPeriod{
-                            print("Start your \(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue)) free trial")
+                            print("\(product.introductoryPrice?.price) \(product.introductoryPrice?.priceLocale.currencySymbol) -  Start your \(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue)) free trial")
                             let periodString = "\(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue))."
                             let trailString = " \(trailperiod.numberOfUnits) \(unitName(unitRawValue: trailperiod.unit.rawValue)) free trial. "
                             

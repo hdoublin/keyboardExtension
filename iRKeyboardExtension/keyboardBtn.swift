@@ -25,22 +25,16 @@ class keyboardBtn: UIButton {
        
        //common func to init our view
        private func setupView() {
-            backgroundColor = .lightText
-            layer.masksToBounds = false
-            layer.cornerRadius = 5
-            layer.borderColor = UIColor.clear.cgColor
-            layer.borderWidth = 1.0
-            layer.borderColor = UIColor.lightText.cgColor
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOpacity = 0.8
-//            layer.shadowRadius = 5
-            layer.shadowOffset = CGSize(width: 1, height: 1)
-
-      
-        
-//            titleLabel?.textColor = UIColor.black
-    //        bounds.size.width = bounds.height
-            
+        backgroundColor = UIColor.white
+        layer.masksToBounds = false
+        layer.cornerRadius = 5
+        layer.borderColor = UIColor.systemGray.cgColor
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.lightText.cgColor
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 1
+        layer.shadowOffset = CGSize(width: 0, height: -1)  
         
        }
     
@@ -51,12 +45,12 @@ class keyboardBtn: UIButton {
     }
     
     @objc func touchDown(){
-        UIView.animate(withDuration: 0.1,
+        UIView.animate(withDuration: 0.01,
         animations: {
-            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.4)
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.2)
         },
         completion: { _ in
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: 0.01) {
                 self.transform = CGAffineTransform.identity
             }
         })

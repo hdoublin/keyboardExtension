@@ -22,7 +22,7 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
     var spacingHeight : CGFloat = UIScreen.main.bounds.height * 3 / 192
     let keyboardHeight: CGFloat = UIScreen.main.bounds.height * 3 / 8  //UIScreen.main.bounds.height * 3 / 7
  //UIScreen.main.bounds.height * 3 / 7
-    var buttonHeight : CGFloat = 50
+    var buttonHeight : CGFloat = 44
     let screenHeight = UIScreen.main.bounds.height
     let screenWidth = UIScreen.main.bounds.width
     
