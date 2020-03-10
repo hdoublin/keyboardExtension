@@ -13,12 +13,12 @@ import StoreKit
 struct IAPHelper {
     typealias Finished = () -> ()
     // Your sharedSecrets
-    static let sharedSecret = "yourSharedSecret"
+    static let sharedSecret = "ec860eee216d409bb7269f2e89505296"
     
     // List your products / Example Products
     static let Product1 = "kExtension"
     static var removeAds = "remove1"
-    static var premium = "premium"
+    static var premium = "fonts.premium1w"
     
     //just for subscriptions
     static let termsOfServiceURL = "your - URL"

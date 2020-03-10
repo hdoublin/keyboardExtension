@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.iRKeyboard.extension</string>
+		<string>group.wecodefonts</string>
 	</array>
 </dict>
 </plist>

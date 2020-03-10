@@ -17,7 +17,6 @@
 		3D07BFCA24163D44006EE316 /* spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC924163D44006EE316 /* spinner.swift */; };
 		3D0C2F9D240DBB0900EB0AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
 		3DAE95E7240CE32D00CC8AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */; };
-		3DAE95E9240CE32D00CC8AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */; };
 		3DAE95EE240CE32D00CC8AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EC240CE32D00CC8AEC /* Main.storyboard */; };
 		3DAE95F0240CE33000CC8AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
 		3DAE95F3240CE33000CC8AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */; };
@@ -62,9 +61,8 @@
 		3D07BFC924163D44006EE316 /* spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinner.swift; sourceTree = "<group>"; };
 		3D0C2F9B240DB9F500EB0AA1 /* iRKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRKeyboardExtension.entitlements; sourceTree = "<group>"; };
 		3D0C2F9C240DBA6E00EB0AA1 /* kExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kExtension.entitlements; sourceTree = "<group>"; };
-		3DAE95E3240CE32D00CC8AEC /* kExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE95E3240CE32D00CC8AEC /* Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DAE95ED240CE32D00CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DAE95EF240CE33000CC8AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DAE95F2240CE33000CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +129,7 @@
 		3DAE95E4240CE32D00CC8AEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DAE95E3240CE32D00CC8AEC /* kExtension.app */,
+				3DAE95E3240CE32D00CC8AEC /* Fonts.app */,
 				3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */,
 			);
 			name = Products;
@@ -146,7 +144,6 @@
 				3D07BFC624163CA0006EE316 /* IAPHelper */,
 				3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */,
 				3D07BFC924163D44006EE316 /* spinner.swift */,
-				3DAE95E8240CE32D00CC8AEC /* SceneDelegate.swift */,
 				3DAE95EC240CE32D00CC8AEC /* Main.storyboard */,
 				3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */,
 				3DAE95EF240CE33000CC8AEC /* Assets.xcassets */,
@@ -204,7 +201,7 @@
 			);
 			name = kExtension;
 			productName = kExtension;
-			productReference = 3DAE95E3240CE32D00CC8AEC /* kExtension.app */;
+			productReference = 3DAE95E3240CE32D00CC8AEC /* Fonts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3DAE95FD240CE36900CC8AEC /* iRKeyboardExtension */ = {
@@ -337,7 +334,6 @@
 				3D07BFBA24163AB7006EE316 /* ViewController.swift in Sources */,
 				3D07BFC824163CB8006EE316 /* IAPHelper.swift in Sources */,
 				3D07BFC424163BD6006EE316 /* firstCell.swift in Sources */,
-				3DAE95E9240CE32D00CC8AEC /* SceneDelegate.swift in Sources */,
 				3D07BFC324163BD6006EE316 /* secondCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -485,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -503,14 +499,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = kExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts;
+				PRODUCT_NAME = Fonts;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,14 +522,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = kExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts;
+				PRODUCT_NAME = Fonts;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -542,14 +542,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension.iRKeyboardExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.iRKeyboardExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -562,14 +562,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y4ZS4T29GZ;
+				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.iR.kExtension.iRKeyboardExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.iRKeyboardExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

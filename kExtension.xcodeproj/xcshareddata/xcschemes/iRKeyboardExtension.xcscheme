@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-               BuildableName = "kExtension.app"
+               BuildableName = "Fonts.app"
                BlueprintName = "kExtension"
                ReferencedContainer = "container:kExtension.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-            BuildableName = "kExtension.app"
+            BuildableName = "Fonts.app"
             BlueprintName = "kExtension"
             ReferencedContainer = "container:kExtension.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-            BuildableName = "kExtension.app"
+            BuildableName = "Fonts.app"
             BlueprintName = "kExtension"
             ReferencedContainer = "container:kExtension.xcodeproj">
          </BuildableReference>
