@@ -16,7 +16,7 @@ struct IAPHelper {
     static let sharedSecret = "ec860eee216d409bb7269f2e89505296"
     
     // List your products / Example Products
-    static let Product1 = "kExtension"
+    static let Product1 = "Fontz"
     static var removeAds = "remove1"
     static var premium = "fonts.premium1w"
     

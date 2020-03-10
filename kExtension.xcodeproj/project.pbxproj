@@ -21,7 +21,7 @@
 		3DAE95F0240CE33000CC8AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
 		3DAE95F3240CE33000CC8AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */; };
 		3DAE9601240CE36900CC8AEC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9600240CE36900CC8AEC /* KeyboardViewController.swift */; };
-		3DAE9605240CE36900CC8AEC /* iRKeyboardExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3DAE9605240CE36900CC8AEC /* Fontz Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DAE95FE240CE36900CC8AEC /* Fontz Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3DAE960B240CE39100CC8AEC /* keyboardBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE960A240CE39100CC8AEC /* keyboardBtn.swift */; };
 		C08CF76C94703E8FDA925EF7 /* Pods_kExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725D33C72B130809490B64DE /* Pods_kExtension.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3DAE9605240CE36900CC8AEC /* iRKeyboardExtension.appex in Embed App Extensions */,
+				3DAE9605240CE36900CC8AEC /* Fontz Keyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,13 +61,13 @@
 		3D07BFC924163D44006EE316 /* spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinner.swift; sourceTree = "<group>"; };
 		3D0C2F9B240DB9F500EB0AA1 /* iRKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRKeyboardExtension.entitlements; sourceTree = "<group>"; };
 		3D0C2F9C240DBA6E00EB0AA1 /* kExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kExtension.entitlements; sourceTree = "<group>"; };
-		3DAE95E3240CE32D00CC8AEC /* Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE95E3240CE32D00CC8AEC /* Fontz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fontz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DAE95ED240CE32D00CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DAE95EF240CE33000CC8AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DAE95F2240CE33000CC8AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DAE95F4240CE33000CC8AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iRKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE95FE240CE36900CC8AEC /* Fontz Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Fontz Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAE9600240CE36900CC8AEC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		3DAE9602240CE36900CC8AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAE960A240CE39100CC8AEC /* keyboardBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardBtn.swift; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		3DAE95E4240CE32D00CC8AEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DAE95E3240CE32D00CC8AEC /* Fonts.app */,
-				3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */,
+				3DAE95E3240CE32D00CC8AEC /* Fontz.app */,
+				3DAE95FE240CE36900CC8AEC /* Fontz Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			);
 			name = kExtension;
 			productName = kExtension;
-			productReference = 3DAE95E3240CE32D00CC8AEC /* Fonts.app */;
+			productReference = 3DAE95E3240CE32D00CC8AEC /* Fontz.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3DAE95FD240CE36900CC8AEC /* iRKeyboardExtension */ = {
@@ -218,7 +218,7 @@
 			);
 			name = iRKeyboardExtension;
 			productName = iRKeyboardExtension;
-			productReference = 3DAE95FE240CE36900CC8AEC /* iRKeyboardExtension.appex */;
+			productReference = 3DAE95FE240CE36900CC8AEC /* Fontz Keyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -508,7 +508,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts;
-				PRODUCT_NAME = Fonts;
+				PRODUCT_NAME = Fontz;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,7 +531,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts;
-				PRODUCT_NAME = Fonts;
+				PRODUCT_NAME = Fontz;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,8 +549,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.iRKeyboardExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.KeyboardExtension;
+				PRODUCT_NAME = "Fontz Keyboard";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,8 +570,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.iRKeyboardExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = online.wecode.fonts.KeyboardExtension;
+				PRODUCT_NAME = "Fontz Keyboard";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

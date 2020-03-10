@@ -178,10 +178,7 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
+    
         //My Code
         //initialize&removing
         for subView in view.subviews{
@@ -270,7 +267,10 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        isPurchased = UserDefaults.standard.bool(forKey: "isPurchase") ?? false
+        
+        if let userDefaults = UserDefaults(suiteName: "group.wecodefonts") {
+            isPurchased = userDefaults.bool(forKey: "isPurchase")
+        }
         
         if traitCollection.userInterfaceStyle == .light {
            keyColor = UIColor.black
@@ -516,12 +516,34 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
         
 //        let appUrl = NSURL(string: "iRKeyboard://")!
 //        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-        extensionContext?.open(URL(string: "iRKeyboard:")! , completionHandler: nil)
+        //extensionContext?.open(URL(string: "Fontz://")! , completionHandler: nil)
 
+        self.openURL(url: NSURL(string:"Fontz://HomeVC")!)
         
     }
     
+    func openURL(url: NSURL) -> Bool {
+        do {
+            let application = try self.sharedApplication()
+            return application.performSelector(inBackground: "openURL:", with: url) != nil
+        }
+        catch {
+            return false
+        }
+    }
 
+    func sharedApplication() throws -> UIApplication {
+        var responder: UIResponder? = self
+        while responder != nil {
+            if let application = responder as? UIApplication {
+                return application
+            }
+
+            responder = responder?.next
+        }
+
+        throw NSError(domain: "UIInputViewController+sharedApplication.swift", code: 1, userInfo: nil)
+    }
     
     
     @objc func keyPressed(sender: UIButton) {

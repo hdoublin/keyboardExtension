@@ -27,9 +27,9 @@ class ViewController: UIViewController {
         setupViews()
 
         IAPHelper.getProductInfo(with: IAPHelper.premium, completed: {() -> () in
-            self.priceTag.text = IAPHelper.Info[0].priceString //?? "insert appID"
-            self.productName.text = IAPHelper.Info[0].name //?? "Insert appID"
-            self.productDescription.text = IAPHelper.Info[0].localizedDescription //?? "Insert appId"
+            //self.priceTag.text = IAPHelper.Info[0].priceString //?? "insert appID"
+            //self.productName.text = IAPHelper.Info[0].name //?? "Insert appID"
+            //self.productDescription.text = IAPHelper.Info[0].localizedDescription //?? "Insert appId"
         })
     }
     
