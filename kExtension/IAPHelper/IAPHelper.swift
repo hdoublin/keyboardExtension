@@ -10,20 +10,33 @@ import Foundation
 import SwiftyStoreKit
 import StoreKit
 
+class AppCache {
+    
+    static let shared = AppCache()
+    
+    var isPremium = false
+    var expireDate = ""
+    
+    var yearlyPrice = "$19.99"
+    var specialPrice = "0.99"
+    var currencySymbol = "$"
+    var specialPeriod = "1 month"
+    
+    var popActive = false
+
+}
+
 struct IAPHelper {
     typealias Finished = () -> ()
     // Your sharedSecrets
     static let sharedSecret = "ec860eee216d409bb7269f2e89505296"
-    
-    // List your products / Example Products
-    static let Product1 = "Fontz"
-    static var removeAds = "remove1"
     static var premium = "fonts.premium1w"
     
     //just for subscriptions
-    static let termsOfServiceURL = "your - URL"
-    static let privacyPolicyURL = "your - URL"
+    static let termsOfServiceURL = "https://wecode.online/app/terms_and_conditions.html"
+    static let privacyPolicyURL = "https://wecode.online/app/privacy_policy.html"
     
+    static let IAPSet : Set<String> = ["fonts.premium1w"]
     
     enum PurchaseType: Int {
         case simple = 0,
@@ -61,11 +74,20 @@ struct IAPHelper {
                     case .purchased(let expiryDate):
                         
                         print("\(productId) is valid until \(expiryDate)")
+                        AppCache.shared.isPremium = true
+                        UserDefaults(suiteName: "group.wecodefonts")?.set(1, forKey: "isPurchased")
+                        UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
+                        NotificationCenter.default.post(name: Notification.Name("subsOK"), object: nil)
                     case .expired(let expiryDate):
                         
                         print("\(productId) is expired since \(expiryDate)")
+                        AppCache.shared.isPremium = false
+                        UserDefaults(suiteName: "group.wecodefonts")?.set(0, forKey: "isPurchased")
+                        UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
                     case .notPurchased:
-                        
+                        AppCache.shared.isPremium = false
+                        UserDefaults(suiteName: "group.wecodefonts")?.set(0, forKey: "isPurchased")
+                        UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
                         print("The user has never purchased \(productId)")
                     }
                 case .nonRenewing:
@@ -152,7 +174,7 @@ struct IAPHelper {
             }
             else if results.restoredPurchases.count > 0 {
                 print("Restore Success: \(results.restoredPurchases)")
-                
+                NotificationCenter.default.post(name: Notification.Name("subsOK"), object: nil)
             }
             else {
                 print("Nothing to Restore")
@@ -162,7 +184,70 @@ struct IAPHelper {
         }
     }
     
+    static func checkSubscription(completion: @escaping (_ result: Bool)->()) {
+        
+        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: IAPHelper.sharedSecret)
+        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+            if case .success(let receipt) = result {
+                let purchaseResult = SwiftyStoreKit.verifySubscriptions(ofType: .autoRenewable, productIds: IAPHelper.IAPSet, inReceipt: receipt)
+                
+                switch purchaseResult {
+                case .purchased(let expiryDate, let items):
+                    
+                    for item in items
+                    {
+                        print("Product \(item.productId) is valid until \(expiryDate)")
+                        UserDefaults(suiteName: "group.wecodefonts")?.set(expiryDate, forKey: "appExpire")
+                        AppCache.shared.expireDate = "\(expiryDate)"
+                        
+                        if item.productId.contains("premium") {
+                            UserDefaults(suiteName: "group.wecodefonts")?.set(1, forKey: "isPurchased")
+                            UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
+                            AppCache.shared.isPremium = true
+                        }
+                    }
+                    
+                    
+                    NotificationCenter.default.post(name: Notification.Name("subsOK"), object: nil)
+                    //API.sharedInstance.updatePayment(product: (items.first?.productId)!, status: "active", expired: expiryDate.string(withFormat: "YYYY-MM-dd HH:mm:ss"), transID: (items.first?.transactionId)!)
+                    completion(true)
+                case .expired(let expiryDate, let items):
+                    
+                    for item in items
+                    {
+                        print("Product \(item.productId) is valid until \(expiryDate)")
+                        UserDefaults(suiteName: "group.wecodefonts")?.set(expiryDate, forKey: "appExpire")
+                        AppCache.shared.expireDate = "\(expiryDate)"
+                        
+                        if item.productId.contains("premium") {
+                            UserDefaults(suiteName: "group.wecodefonts")?.set(1, forKey: "isPurchased")
+                            UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
+                            AppCache.shared.isPremium = false
+                        }
+                    }
+                    
+                    
+                    NotificationCenter.default.post(name: Notification.Name("subsEX"), object: nil)
+                    //API.sharedInstance.updatePayment(product: (items.first?.productId)!, status: "expired", expired: expiryDate.string(withFormat: "YYYY-MM-dd HH:mm:ss"), transID: (items.first?.transactionId)!)
+                    completion(false)
+                case .notPurchased:
+                    print("This product has never been purchased")
+                    UserDefaults(suiteName: "group.wecodefonts")?.set(Date().addingTimeInterval(TimeInterval(-14440)), forKey: "appExpire")
+                    UserDefaults(suiteName: "group.wecodefonts")?.set(0, forKey: "isPurchased")
+                    //UserDefaults.standard.set(0, forKey: "isUltimate")
+                    UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
+                    AppCache.shared.isPremium = false
+                    completion(false)
+                }
+            } else {
+                print("Receipt verification error", result)
+                completion(false)
+            }
+        }
+    }
+    
     static func startHelper() {
+                
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
                 switch purchase.transaction.transactionState {
@@ -172,6 +257,9 @@ struct IAPHelper {
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
                 // Unlock content
+                    UserDefaults(suiteName: "group.wecodefonts")?.set(1, forKey: "isPurchased")
+                    UserDefaults(suiteName: "group.wecodefonts")?.synchronize()
+                    AppCache.shared.isPremium = true
                 case .failed, .purchasing, .deferred:
                     break // do nothing
                 }
@@ -208,26 +296,24 @@ struct IAPHelper {
         }
     }
     
-    static var subscriptionTerms = "Subscription price: -,-- Please read below about the auto-renewing subscription nature of this product: • Payment will be charged to iTunes Account at confirmation of purchase • Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period • Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal • Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase • Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable Terms of Use: Policy: "
+    static var subscriptionTerms = "Please read below about the auto-renewing subscription nature of this product: • Payment will be charged to iTunes Account at confirmation of purchase • Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period • Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal • Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase • Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable Terms of Use: \(termsOfServiceURL) \nPrivacy Policy: \(privacyPolicyURL)"
     static func getSubscriptionTerms(with id: String, completed: @escaping Finished) {
         SwiftyStoreKit.retrieveProductsInfo([id]) { result in
             if let product = result.retrievedProducts.first {
-                let priceString = product.localizedPrice!
+                AppCache.shared.yearlyPrice = product.localizedPrice!
                 
                 if #available(iOS 11.2, *) {
-                    if let trailperiod = product.introductoryPrice?.subscriptionPeriod {
+                    
                         if let period = product.introductoryPrice?.subscriptionPeriod{
-                            print("\(product.introductoryPrice?.price) \(product.introductoryPrice?.priceLocale.currencySymbol) -  Start your \(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue)) free trial")
-                            let periodString = "\(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue))."
-                            let trailString = " \(trailperiod.numberOfUnits) \(unitName(unitRawValue: trailperiod.unit.rawValue)) free trial. "
                             
-                            
-                            
-                            print("Product: \(product.localizedDescription), price: \(priceString)")
-                            Info.append(Objects(name: product.localizedTitle, priceString: product.localizedPrice, localizedDescription: product.localizedDescription))
-                            subscriptionTerms = "Subscription price: \(Info[0].priceString ?? "--,-") Description: \(Info[0].localizedDescription ?? ""). Free Trial: \(trailString) Subscription duration: \(periodString) \n\nPlease read below about the auto-renewing subscription nature of this product: \n\n• Payment will be charged to iTunes Account at confirmation of purchase \n• Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period \n• Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal \n• Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase \n• Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable \n\nTerms of Use: \(termsOfServiceURL) \nPrivacy Policy: \(privacyPolicyURL)"
+                            AppCache.shared.specialPrice = "\(product.introductoryPrice?.price ?? 0.99)"
+                            AppCache.shared.currencySymbol = "\(product.introductoryPrice?.priceLocale.currencySymbol ?? "$")"
+                            AppCache.shared.specialPeriod = "\(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue))"
+                            //print("\(product.introductoryPrice?.price) \(product.introductoryPrice?.priceLocale.currencySymbol) -   \(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue))")
+
+                            subscriptionTerms = "Special offer \(period.numberOfUnits) \(unitName(unitRawValue: period.unit.rawValue)) \(AppCache.shared.currencySymbol)\(AppCache.shared.specialPrice) - Subscription price: \(AppCache.shared.yearlyPrice) Description: \(product.localizedDescription).\n\nPlease read below about the auto-renewing subscription nature of this product: \n\n• Payment will be charged to iTunes Account at confirmation of purchase \n• Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period \n• Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal \n• Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase \n• Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable \n\nTerms of Use: \(termsOfServiceURL) \nPrivacy Policy: \(privacyPolicyURL)"
                         }
-                    }
+                    
                 } else {
                 }
             }
@@ -244,8 +330,8 @@ struct IAPHelper {
     static func unitName(unitRawValue:UInt) -> String {
         switch unitRawValue {
         case 0: return "days"
-        case 1: return "Week"
-        case 2: return "months"
+        case 1: return "week"
+        case 2: return "month"
         case 3: return "years"
         default: return ""
         }

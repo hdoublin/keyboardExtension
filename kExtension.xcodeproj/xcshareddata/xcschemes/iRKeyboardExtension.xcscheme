@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DAE95FD240CE36900CC8AEC"
-               BuildableName = "iRKeyboardExtension.appex"
+               BuildableName = "Fontz Keyboard.appex"
                BlueprintName = "iRKeyboardExtension"
                ReferencedContainer = "container:kExtension.xcodeproj">
             </BuildableReference>
@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-               BuildableName = "Fonts.app"
+               BuildableName = "Fontz.app"
                BlueprintName = "kExtension"
                ReferencedContainer = "container:kExtension.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-            BuildableName = "Fonts.app"
+            BuildableName = "Fontz.app"
             BlueprintName = "kExtension"
             ReferencedContainer = "container:kExtension.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DAE95E2240CE32D00CC8AEC"
-            BuildableName = "Fonts.app"
+            BuildableName = "Fontz.app"
             BlueprintName = "kExtension"
             ReferencedContainer = "container:kExtension.xcodeproj">
          </BuildableReference>

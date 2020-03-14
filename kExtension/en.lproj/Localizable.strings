@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  kExtension
+
+  Created by Can Aksoy on 14.03.2020.
+  Copyright © 2020 Imran R. All rights reserved.
+*/
+"Enable Keyboard" = "Enable Keyboard";
+"Go to the Settings" = "Go to Fontz Settings";
+"Tap Keyboards" = "Tap \"Keyboards\"";
+"Switch on Fontz Keyboard" = "Switch on \"Fontz Keyboard\"";
+"Fontz Keyboard is Ready!" = "Fontz Keyboard is Ready!";
+
+"Settings" = "Settings";
+"Open Fontz Settings" = "Open Fontz Settings";
+"Leave Feedback" = "Leave Feedback";
+"Rate Fontz" = "Rate Fontz on the App Store";
+"Terms of Service" = "Terms of Service";
+"Privacy & Policy" = "Privacy & Policy";
+
+"Support - Fontz" = "Support - Fontz";
+"Error" = "Error";
+"Your device cannot sent email. Please check your email configuration" = "Your device cannot sent email. Please check your email configuration";
+"OK" = "OK";
+
+"Unlock all super fonts" = "Unlock all super fonts";
+"New fonts updated every months" = "New fonts updated every months";
+
+"Try" = "Try";
+"1 month" = "1 month";
+"Unlock All Fonts" = "Unlock All Fonts";

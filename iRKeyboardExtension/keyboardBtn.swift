@@ -25,7 +25,12 @@ class keyboardBtn: UIButton {
        
        //common func to init our view
        private func setupView() {
-        backgroundColor = UIColor.white
+        
+        if traitCollection.userInterfaceStyle == .light {
+           backgroundColor = UIColor.white
+        } else {
+            backgroundColor = UIColor.black
+        }
         layer.masksToBounds = false
         layer.cornerRadius = 5
         layer.borderColor = UIColor.systemGray.cgColor
@@ -34,7 +39,7 @@ class keyboardBtn: UIButton {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 1
-        layer.shadowOffset = CGSize(width: 0, height: -1)  
+        layer.shadowOffset = CGSize(width: 0, height: 1)
         
        }
     

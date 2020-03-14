@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36753967241C30F600E485F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36753966241C30F600E485F9 /* GoogleService-Info.plist */; };
+		3675396B241C4F8F00E485F9 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675396A241C4F8F00E485F9 /* PremiumViewController.swift */; };
+		3675396D241C6EBA00E485F9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675396C241C6EBA00E485F9 /* BaseViewController.swift */; };
+		36753970241C6FA700E485F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36753972241C6FA700E485F9 /* Localizable.strings */; };
 		3D07BFBA24163AB7006EE316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFB924163AB7006EE316 /* ViewController.swift */; };
-		3D07BFBC24163B08006EE316 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3D07BFBB24163B08006EE316 /* Podfile */; };
-		3D07BFC124163BD6006EE316 /* thirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBD24163BD5006EE316 /* thirdCell.swift */; };
-		3D07BFC224163BD6006EE316 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBE24163BD5006EE316 /* settingViewController.swift */; };
-		3D07BFC324163BD6006EE316 /* secondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBF24163BD6006EE316 /* secondCell.swift */; };
-		3D07BFC424163BD6006EE316 /* firstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC024163BD6006EE316 /* firstCell.swift */; };
+		3D07BFC224163BD6006EE316 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFBE24163BD5006EE316 /* SettingsViewController.swift */; };
 		3D07BFC824163CB8006EE316 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC724163CB8006EE316 /* IAPHelper.swift */; };
 		3D07BFCA24163D44006EE316 /* spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D07BFC924163D44006EE316 /* spinner.swift */; };
 		3D0C2F9D240DBB0900EB0AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE95EF240CE33000CC8AEC /* Assets.xcassets */; };
@@ -51,12 +51,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36753966241C30F600E485F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		36753968241C4BB300E485F9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		36753969241C4BB300E485F9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3675396A241C4F8F00E485F9 /* PremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumViewController.swift; sourceTree = "<group>"; };
+		3675396C241C6EBA00E485F9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		36753971241C6FA700E485F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		36753973241C6FAB00E485F9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D07BFB924163AB7006EE316 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D07BFBB24163B08006EE316 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3D07BFBD24163BD5006EE316 /* thirdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdCell.swift; sourceTree = "<group>"; };
-		3D07BFBE24163BD5006EE316 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
-		3D07BFBF24163BD6006EE316 /* secondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondCell.swift; sourceTree = "<group>"; };
-		3D07BFC024163BD6006EE316 /* firstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstCell.swift; sourceTree = "<group>"; };
+		3D07BFBE24163BD5006EE316 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D07BFC724163CB8006EE316 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		3D07BFC924163D44006EE316 /* spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinner.swift; sourceTree = "<group>"; };
 		3D0C2F9B240DB9F500EB0AA1 /* iRKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRKeyboardExtension.entitlements; sourceTree = "<group>"; };
@@ -95,17 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D07BFC524163BDB006EE316 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				3D07BFC024163BD6006EE316 /* firstCell.swift */,
-				3D07BFBF24163BD6006EE316 /* secondCell.swift */,
-				3D07BFBE24163BD5006EE316 /* settingViewController.swift */,
-				3D07BFBD24163BD5006EE316 /* thirdCell.swift */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
 		3D07BFC624163CA0006EE316 /* IAPHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +109,6 @@
 		3DAE95DA240CE32D00CC8AEC = {
 			isa = PBXGroup;
 			children = (
-				3D07BFBB24163B08006EE316 /* Podfile */,
 				3DAE95E5240CE32D00CC8AEC /* kExtension */,
 				3DAE95FF240CE36900CC8AEC /* iRKeyboardExtension */,
 				3DAE95E4240CE32D00CC8AEC /* Products */,
@@ -138,9 +129,12 @@
 		3DAE95E5240CE32D00CC8AEC /* kExtension */ = {
 			isa = PBXGroup;
 			children = (
+				36753966241C30F600E485F9 /* GoogleService-Info.plist */,
 				3D0C2F9C240DBA6E00EB0AA1 /* kExtension.entitlements */,
-				3D07BFC524163BDB006EE316 /* Setting */,
+				3675396C241C6EBA00E485F9 /* BaseViewController.swift */,
 				3D07BFB924163AB7006EE316 /* ViewController.swift */,
+				3D07BFBE24163BD5006EE316 /* SettingsViewController.swift */,
+				3675396A241C4F8F00E485F9 /* PremiumViewController.swift */,
 				3D07BFC624163CA0006EE316 /* IAPHelper */,
 				3DAE95E6240CE32D00CC8AEC /* AppDelegate.swift */,
 				3D07BFC924163D44006EE316 /* spinner.swift */,
@@ -148,6 +142,7 @@
 				3DAE95F1240CE33000CC8AEC /* LaunchScreen.storyboard */,
 				3DAE95EF240CE33000CC8AEC /* Assets.xcassets */,
 				3DAE95F4240CE33000CC8AEC /* Info.plist */,
+				36753972241C6FA700E485F9 /* Localizable.strings */,
 			);
 			path = kExtension;
 			sourceTree = "<group>";
@@ -246,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 3DAE95DA240CE32D00CC8AEC;
 			productRefGroup = 3DAE95E4240CE32D00CC8AEC /* Products */;
@@ -263,9 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36753970241C6FA700E485F9 /* Localizable.strings in Resources */,
 				3DAE95F3240CE33000CC8AEC /* LaunchScreen.storyboard in Resources */,
 				3DAE95F0240CE33000CC8AEC /* Assets.xcassets in Resources */,
-				3D07BFBC24163B08006EE316 /* Podfile in Resources */,
+				36753967241C30F600E485F9 /* GoogleService-Info.plist in Resources */,
 				3DAE95EE240CE32D00CC8AEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,14 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3675396B241C4F8F00E485F9 /* PremiumViewController.swift in Sources */,
 				3DAE95E7240CE32D00CC8AEC /* AppDelegate.swift in Sources */,
-				3D07BFC124163BD6006EE316 /* thirdCell.swift in Sources */,
-				3D07BFC224163BD6006EE316 /* settingViewController.swift in Sources */,
+				3D07BFC224163BD6006EE316 /* SettingsViewController.swift in Sources */,
 				3D07BFCA24163D44006EE316 /* spinner.swift in Sources */,
 				3D07BFBA24163AB7006EE316 /* ViewController.swift in Sources */,
+				3675396D241C6EBA00E485F9 /* BaseViewController.swift in Sources */,
 				3D07BFC824163CB8006EE316 /* IAPHelper.swift in Sources */,
-				3D07BFC424163BD6006EE316 /* firstCell.swift in Sources */,
-				3D07BFC324163BD6006EE316 /* secondCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +354,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		36753972241C6FA700E485F9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36753971241C6FA700E485F9 /* en */,
+				36753973241C6FAB00E485F9 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3DAE95EC240CE32D00CC8AEC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3DAE95ED240CE32D00CC8AEC /* Base */,
+				36753968241C4BB300E485F9 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3DAE95F2240CE33000CC8AEC /* Base */,
+				36753969241C4BB300E485F9 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -381,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -441,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -499,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = kExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -522,6 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kExtension/kExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = kExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -542,6 +553,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,6 +575,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = iRKeyboardExtension/iRKeyboardExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DL54SG3W96;
 				INFOPLIST_FILE = iRKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

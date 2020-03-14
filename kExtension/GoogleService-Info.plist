@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>216207460205-etmgr2au7ov16etconmfbkoe7rregprs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.216207460205-etmgr2au7ov16etconmfbkoe7rregprs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAB_1DseLwyQBx2bHuDNpvuFg8ZCQJYie8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>216207460205</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>online.wecode.fonts</string>
+	<key>PROJECT_ID</key>
+	<string>fontz-d68b1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fontz-d68b1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:216207460205:ios:c37e6d3d672ec7d7503c64</string>
+	<key>DATABASE_URL</key>
+	<string>https://fontz-d68b1.firebaseio.com</string>
+</dict>
+</plist>

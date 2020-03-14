@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  kExtension
+
+  Created by Can Aksoy on 14.03.2020.
+  Copyright © 2020 Imran R. All rights reserved.
+*/
+"Enable Keyboard" = "Klavyeyi Yükle";
+"Go to the Settings" = "Fontz Ayarlarına Git";
+"Tap Keyboards" = "\"Klavyeler\"e Dokun";
+"Switch on Fontz Keyboard" = "\"Fontz Keyboard\"u Aç";
+"Fontz Keyboard is Ready!" = "Fontz Keyboard Hazır!";
+
+"Get Started" = "Başla";
+
+"Settings" = "Ayarlar";
+"Open Fontz Settings" = "Fontz Ayarlarını Aç";
+"Leave Feedback" = "Bize Ulaşın";
+"Rate Fontz" = "App Store'da Oy Ver";
+"Terms of Service" = "Kullanım Koşulları";
+"Privacy & Policy" = "Gizlilik Sözleşmesi";
+
+"Support - Fontz" = "Destek - Fontz";
+"Error" = "Hata";
+"Your device cannot sent email. Please check your email configuration" = "Cihazınızda e-posta tanımlı değil";
+"OK" = "Tamam";
+
+"Unlock all super fonts" = "Tüm fontların kilidini aç";
+"New fonts updated every months" = "Her ay yeni fontlarla güncel kal";
+
+"Try" = "Dene";
+"1 month" = "1 ay";
+"Unlock All Fonts" = "Tüm Fontları Aç";

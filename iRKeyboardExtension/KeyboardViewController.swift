@@ -9,12 +9,11 @@
 import UIKit
 
 
-
 class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
     
-    var isPurchased: Bool = false
+    var isPurchased: Int = 0
     
     var buttonY: CGFloat = 5
     
@@ -141,17 +140,17 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
     
     private let container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.groupTableViewBackground
+        view.backgroundColor = UIColor.clear
 //        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     let charSet: UICollectionView = {
-       let layout = UICollectionViewFlowLayout()
-       layout.scrollDirection = .horizontal
-       let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .groupTableViewBackground
-       return cv
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
+        return cv
     }()
     
     let locker: UIView = {
@@ -213,7 +212,7 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
         //locker
         self.view.addSubview(locker)
         self.locker.addSubview(unlockBtn)
-        if !isPurchased {locker.isHidden = true}
+        if isPurchased == 1 {locker.isHidden = true}
         locker.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 0).isActive = true
         locker.rightAnchor.constraint(equalTo: container.rightAnchor, constant: 0).isActive = true
         locker.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: 0).isActive = true
@@ -228,10 +227,10 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
 //        unlockBtn.lay
 
 
-        unlockBtn.backgroundColor = UIColor.blue
+        unlockBtn.backgroundColor = UIColor(red: 0.573, green: 0.871, blue: 1, alpha: 1)
         unlockBtn.showsTouchWhenHighlighted = true
         unlockBtn.setTitle("UNLOCK", for: .normal)
-        unlockBtn.titleColor(for: .normal)
+        unlockBtn.setTitleColor(.black, for: .normal)
         unlockBtn.addTarget(self, action: #selector(willPurchase), for: .touchUpInside)
         
         
@@ -259,17 +258,18 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
         charSetArray.append(font20)
         fontSource = charSetArray[0] // 96 characters
         
-        
-        
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         if let userDefaults = UserDefaults(suiteName: "group.wecodefonts") {
-            isPurchased = userDefaults.bool(forKey: "isPurchase")
+            isPurchased = userDefaults.integer(forKey: "isPurchased")
+        }
+        
+        if isPurchased == 1 {
+            locker.isHidden = true
+        } else {
+            locker.isHidden = false
         }
         
         if traitCollection.userInterfaceStyle == .light {
@@ -412,7 +412,8 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
                     oneBtn.addTarget(self, action: #selector(returnKeyPressed), for: .touchUpInside)
                 }
                 oneBtn.setTitleColor(keyColor, for: .normal)
-                
+                oneBtn.imageView?.contentMode = .scaleAspectFit
+                oneBtn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
                 keyboards.append(oneBtn)
                 oneBtn.tag = keyboards.count - 1
                 self.container.addSubview(oneBtn)
@@ -443,6 +444,8 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
                 }
                 
                 oneBtn.setTitleColor(keyColor, for: .normal)
+                oneBtn.imageView?.contentMode = .scaleAspectFit
+                oneBtn.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
                 keyboards.append(oneBtn)
                 oneBtn.tag = keyboards.count - 1
                 self.container.addSubview(oneBtn)
@@ -470,6 +473,8 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
                     oneBtn.addTarget(self, action: #selector(keyPressed(sender:)), for: .touchUpInside)
                 }
                 oneBtn.setTitleColor(keyColor, for: .normal)
+                oneBtn.imageView?.contentMode = .scaleAspectFit
+                oneBtn.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
                 keyboards.append(oneBtn)
                 oneBtn.tag = keyboards.count - 1
                 self.container.addSubview(oneBtn)
@@ -518,7 +523,7 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
 //        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
         //extensionContext?.open(URL(string: "Fontz://")! , completionHandler: nil)
 
-        self.openURL(url: NSURL(string:"Fontz://HomeVC")!)
+        self.openURL(url: NSURL(string:"Fontz://purchase")!)
         
     }
     
@@ -638,11 +643,15 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
             
         }
         
-        cell.layer.cornerRadius = 5
-//        cell.layer.shadowRadius = 5
+        cell.layer.cornerRadius = 4
+        cell.layer.borderColor = UIColor.systemGray.cgColor
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor.lightText.cgColor
         cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 0.8
-        cell.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowRadius = 0.5
+        cell.layer.shadowOffset = CGSize(width: 0, height: 1)
+        
         let cellLbl = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.width, height: cell.bounds.height))
         cellLbl.textColor = keyColor
         cellLbl.textAlignment = .center
@@ -676,7 +685,11 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
        
        viewWillAppear(true)
         
-        if isPurchased == false {
+        if let userDefaults = UserDefaults(suiteName: "group.wecodefonts") {
+            isPurchased = userDefaults.integer(forKey: "isPurchased")
+        }
+        
+        if isPurchased == 0 {
             if indexPath.row > 1 {
                 locker.isHidden = false
                 
@@ -685,6 +698,12 @@ class KeyboardViewController: UIInputViewController,UICollectionViewDelegate, UI
                 locker.isHidden = true
             }                
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 10)
+        
     }
 }
 
