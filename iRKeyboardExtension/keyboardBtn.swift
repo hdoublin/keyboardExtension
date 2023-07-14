@@ -10,24 +10,23 @@ import UIKit
 
 class keyboardBtn: UIButton {
 
-     //initWithFrame to init view from code
-       override init(frame: CGRect) {
-         super.init(frame: frame)
-         setupView()
+    //initWithFrame to init view from code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
         setAnimation()
-       }
-       
-       //initWithCode to init view from xib or storyboard
-       required init(coder aDecoder: NSCoder) {
+    }
+
+    //initWithCode to init view from xib or storyboard
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-         setupView()
-       }
-       
-       //common func to init our view
-       private func setupView() {
-        
+        setupView()
+    }
+
+    //common func to init our view
+    private func setupView() {
         if traitCollection.userInterfaceStyle == .light {
-           backgroundColor = UIColor.white
+            backgroundColor = UIColor.white
         } else {
             backgroundColor = UIColor.black
         }
@@ -40,15 +39,14 @@ class keyboardBtn: UIButton {
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 1
         layer.shadowOffset = CGSize(width: 0, height: 1)
-        
-       }
+    }
     
     private func setAnimation(){
         
         self.addTarget(self, action: #selector(touchDown), for: .touchDown)
         
     }
-    
+
     @objc func touchDown(){
         UIView.animate(withDuration: 0.01,
         animations: {

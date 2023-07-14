@@ -26,7 +26,7 @@ import Foundation
 #if os(OSX)
     import AppKit
     
-    public typealias View = NSView
+    public typealias TinyView = NSView
     public typealias LayoutGuide = NSLayoutGuide
     public typealias ConstraintAxis = NSLayoutConstraint.Orientation
     public typealias LayoutPriority = NSLayoutConstraint.Priority
@@ -38,7 +38,7 @@ import Foundation
 #else
     import UIKit
     
-    public typealias View = UIView
+    public typealias TinyView = UIView
     public typealias LayoutGuide = UILayoutGuide
     public typealias ConstraintAxis = NSLayoutConstraint.Axis
     public typealias LayoutPriority = UILayoutPriority
