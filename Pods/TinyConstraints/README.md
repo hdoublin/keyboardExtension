@@ -2,7 +2,6 @@
 
 <p align="center">
     <img src="Art/header.png" width="890" alt="TinyConstraints"/>
-    <img src="Art/header.gif" width="890" alt="TinyConstraints"/>
 </p>
 
 ## Features
@@ -33,13 +32,13 @@ NSLayoutConstraint.activate([
 with `TinyConstraints`:
 
 ```swift
-view.edgesToSuperView()
+view.edgesToSuperview()
 ```
 
 or:
 
 ```swift
-view.edgesToSuperView(insets: .top(10) + .left(10))
+view.edgesToSuperview(insets: .top(10) + .left(10))
 ```
 ### Center
 Constraining the center of a view to its superview with `NSLayoutConstraint`:
@@ -176,6 +175,14 @@ it, simply add the following line to your Cartfile:
 
 ```
 github "roberthein/TinyConstraints"
+```
+
+### Swift Package Manager
+
+TinyConstraints is available through [Swift Package Manager](https://swift.org/package-manager/). To install
+it, in Xcode 11.0 or later select `File` > `Swift Packages` > `Add Package Dependency...` and add TinyConstraints repository URL:
+```
+https://github.com/roberthein/TinyConstraints.git
 ```
 
 ## Tutorials
